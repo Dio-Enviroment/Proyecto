@@ -6,7 +6,7 @@ package Boleria;
 public class Main {
     public static void main(String[] args) {
         System.out.println("- - M I C I N E - -");
-        System.out.println("Rodrigo Tufiño");
+        System.out.println("Dio German");
         // Teclado t = new Teclado();
         // Cine miCine = new Cine();
         int opc = -1;

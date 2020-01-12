@@ -1,4 +1,4 @@
-package Boleria;
+package Boleteria;
 
 /**
  * Main

@@ -16,7 +16,7 @@ public class Main {
             System.out.println("2. Mostrar sala");
             System.out.println("3. Comprar boletos");
             System.out.println("4. Salir");
-            opc = t.getEntero("Ingrese su opción: ");
+            //opc = t.getEntero("Ingrese su opción: ");
             switch (opc) {
             case 1:
                 //miCine.mostrarCartelera();

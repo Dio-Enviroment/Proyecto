@@ -4,11 +4,12 @@ package Boleteria;
  * Main
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("- - M I C I N E - -");
-        System.out.println("Nuevo");
-        // Teclado t = new Teclado();
-        // Cine miCine = new Cine();
+        System.out.println("Rodrigo Tufiño");
+        //Teclado t = new Teclado();
+        Cine miCine = new Cine();
         int opc = -1;
         do {
             System.out.println("\n+ + MENU PRINCIPAL + +");
@@ -19,13 +20,13 @@ public class Main {
             opc = t.getEntero("Ingrese su opción: ");
             switch (opc) {
             case 1:
-                //miCine.mostrarCartelera();
+                miCine.mostrarCartelera();
                 break;
             case 2:
-                //miCine.mostrarSala();
+                miCine.mostrarSala();
                 break;
             case 3:
-                //miCine.comparBoletos();
+                miCine.comparBoletos();
                 break;
             case 4:
                 System.out.println("Gracias por usar este programa");
@@ -36,7 +37,5 @@ public class Main {
             }
         } while (opc != 4);
         System.out.println("\nPrograma finalizado...");
-        //otro
     }
-
 }

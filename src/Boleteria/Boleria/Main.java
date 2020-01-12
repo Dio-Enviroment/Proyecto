@@ -6,7 +6,7 @@ package Boleria;
 public class Main {
     public static void main(String[] args) {
         System.out.println("- - M I C I N E - -");
-        System.out.println("Dio German");
+        System.out.println("Nuevo");
         // Teclado t = new Teclado();
         // Cine miCine = new Cine();
         int opc = -1;
@@ -36,7 +36,7 @@ public class Main {
             }
         } while (opc != 4);
         System.out.println("\nPrograma finalizado...");
-
+        //otro
     }
 
 }

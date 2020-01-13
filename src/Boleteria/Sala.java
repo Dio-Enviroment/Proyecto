@@ -1,7 +1,7 @@
 package Boleteria;
 
 /**
- * Sala
+ * edison
  */
 public class Sala {
 

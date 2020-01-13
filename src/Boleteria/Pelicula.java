@@ -7,4 +7,5 @@ package Boleteria;
 public class Pelicula {
 
     hola
+    print lechon mamas
 }

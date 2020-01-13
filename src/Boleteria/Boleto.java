@@ -1,7 +1,8 @@
 package Boleteria;
 
 /**
- * jeff lokas
+ * jeff lokas loco
+ * 
  */
 public class Boleto {
 

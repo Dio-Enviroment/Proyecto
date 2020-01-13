@@ -5,6 +5,10 @@ package Boleteria;
  */
 public class Sala {
 
-print"maman"
+private int numero ;
+private boolean [][] asientos;
+private char filas [][];
+
+  
     
 }    

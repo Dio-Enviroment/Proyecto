@@ -5,5 +5,4 @@ package Boleteria;
  */
 public class Pelicula {
 
-    hola
 }

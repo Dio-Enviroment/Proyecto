@@ -1,9 +1,10 @@
 package Boleteria;
 
 /**
- * Sala
+ * Edison
  */
 public class Sala {
 
+print"maman"
     
-}
+}    

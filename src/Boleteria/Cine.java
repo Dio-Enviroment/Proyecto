@@ -79,7 +79,7 @@ public class Cine {
             }
             while(sala1.reservar(asiento));
         }
-        //sala1.reservar("d7");
+        //sala1.reservar("d");
         //t.close();
     }
 }

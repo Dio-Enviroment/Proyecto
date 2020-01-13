@@ -3,7 +3,8 @@ package Boleteria;
 import java.util.Scanner;
 
 /**
- * Cine
+ * Dio 
+ * asdasd
  */
 public class Cine {
     private Sala sala1;

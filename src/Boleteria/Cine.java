@@ -3,13 +3,12 @@ package Boleteria;
 import java.util.Scanner;
 
 /**
- * Dio 
- * asdasd
+ * Cine
  */
 public class Cine {
     private Sala sala1;
     private Pelicula[] cartelera;
-    private double PRECIO_BOLETO;
+    private double PRECIO_BOLETO=3.15;
     private Boleto[] boletos;
 
     public Cine() {
@@ -38,49 +37,45 @@ public class Cine {
         sala1.mostrarAsientos();
     }
 
-    private int obtenerIdPelicula() {
-        return 0;
-    }
 
-    private int obtenerNumeroBoletos() {
-        return boletos.length;
-    }
-
-    public void comprarBoletos() {
-        Scanner t=new Scanner(System.in);
-        int numBoletos,idPelicula;
+    public void comprarBoletos(Scanner t) {
+        int numBoletos,idPelicula=-1;
         boolean exit=true;
         String asiento;
+        Pelicula peliculaSeleccionada=null;
         System.out.println("- - B O L E T O S - -");
-        
         do{
-            System.out.println("Ingrese el ID de la película:");
-            idPelicula=Integer.parseInt(t.nextLine());
+            System.out.printf("Ingrese el ID de la película (1-%d):\n",cartelera.length);
+            idPelicula=Tools.soloInt(t,cartelera.length);
             for (Pelicula pelicula : cartelera) {
-                int auxID=Integer.parseInt(pelicula.toString().substring(0, 1));
+                int auxID=pelicula.getId();
                 if(auxID==idPelicula){
+                    peliculaSeleccionada=pelicula;
                     exit=false;
                     break;
                 }
             }
-            if(exit==true){
-                System.out.println("No exite el ID de esa película:"); 
-            }
         }while(exit);
         System.out.println("Ingrese el número de boletos:");
-        numBoletos=Integer.parseInt(t.nextLine());
+        numBoletos=Tools.soloInt(t,-1);;
         boletos=new Boleto[numBoletos];
         System.out.println("Seleccione los asientos");
         sala1.mostrarAsientos();
         System.out.println();
-        for (int i = 0; i < obtenerNumeroBoletos(); i++) {
+        for (int i = 0; i < boletos.length; i++) {
             do{
                 System.out.printf("Boleto #%d\n",i+1);
                 asiento=t.nextLine();
             }
             while(sala1.reservar(asiento));
+            boletos[i]=new Boleto(sala1.getNumero(),peliculaSeleccionada,asiento);
         }
-        //sala1.reservar("d");ssdsd
-        //t.close();
+        Tools.clearConsole();
+        System.out.println("RESUMEN DE LA COMPRA:\n");
+        for (int i = 0; i < boletos.length; i++) {
+            System.out.printf("Boleto #%d\n",i+1);
+            boletos[i].factura(); 
+        }
+        System.out.printf("\nTOTAL: %.2f\n",PRECIO_BOLETO*boletos.length);
     }
 }

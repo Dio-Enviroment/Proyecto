@@ -12,23 +12,24 @@ public class Boleto {
         this.sala = sala;
         this.pelicula = pelicula;
         this.asiento = asiento;
+        System.out.print("s");
     }
 
     private String generarLinea(String tipo) {
         String str = "";
         if (tipo == "arriba") {
-            str = str.concat("┌");
+            str = str.concat("â”Œ");
             for (int j = 0; j < 50; j++) {
-                str = str.concat("─");
+                str = str.concat("â”€");
             }
-            str = str.concat("┐");
+            str = str.concat("â”�");
         }
         else if(tipo == "abajo"){
-            str = str.concat("└");
+            str = str.concat("â””");
             for (int j = 0; j < 50; j++) {
-                str = str.concat("─");
+                str = str.concat("â”€");
             }
-            str = str.concat("┘"); 
+            str = str.concat("â”˜"); 
         }
         return str;
     }
@@ -37,12 +38,12 @@ public class Boleto {
         String str = "";
         int ancho;
         
-        str = str.concat("│"+txt+valor);
+        str = str.concat("â”‚"+txt+valor);
         ancho=str.length();
         for (int j = 0; j < 51-ancho; j++) {
             str = str.concat(" ");
         }
-        str = str.concat("│");
+        str = str.concat("â”‚");
         return str;
     }
 

@@ -12,7 +12,7 @@ public class Boleto {
         this.sala = sala;
         this.pelicula = pelicula;
         this.asiento = asiento;
-        System.out.print("f");
+        System.out.print("f2");
     }
 
     private String generarLinea(String tipo) {
